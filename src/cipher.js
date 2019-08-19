@@ -4,7 +4,17 @@ window.cipher = {
 };
 
 function encode(){
-  alert("encode");
+  let text = "queijo";
+  let codificatxt = new Array;
+  
+  for (let i in text){
+    codificatxt.push(text.charCodeAt(i))
+    i++;
+  }
+
+  console.log(codificatxt)
+
+  
 
 }
 
