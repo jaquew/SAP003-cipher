@@ -7,9 +7,27 @@
   </head>
   <body>
     <div id="root">
-      <h1>Hello world!</h1>
-      <input type="submit" onclick="acao1()" value="Cifrar">
-      <input type="submit" onclick="acao2()" value="Decifrar">
+      <h1>Conexão Segura</h1>
+      Digite o número de casas de deslocamento: 
+      <input type="number" id="offset">
+      <div id="container">
+        <div>
+          <textarea rows="8" cols="50" id="decoded" placeholder="Texto a ser codificado"></textarea>
+        </div>
+        <div id="buttons">
+          <input type="submit" onclick="acao1()" value="Cifrar">
+          
+          <br>
+          <input type="submit" onclick="acao2()" value="Decifrar">
+          <br>
+          <!-- <input type="reset"> -->
+        
+        </div>
+        <div>
+          <!-- <p>Texto a ser decifrado:</p> -->
+          <textarea rows="8" cols="50" type="text" id="encoded" placeholder="Texto a ser decifrado"></textarea>
+        </div>
+      </div>
     </div>
     <script src="cipher.js"></script>
     <script src="index.js"></script>
