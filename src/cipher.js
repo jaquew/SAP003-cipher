@@ -3,13 +3,9 @@ window.cipher = {
   decode: decode
 };
 
-let text;
-let offset;
-
 function encode(text,offset){
   //desconsidera espaços, converte maiusculas para minusculas
   //melhorar o codigo, muito extenso.
-  text = text.toUpperCase();
 
   let num_array = new Array;
   let text_array = new Array;
@@ -17,27 +13,14 @@ function encode(text,offset){
   console.log(text)
 
   for (let i in text) {
-    
-    //se for espaço, ponto ou virgula  desconsiderar
-    if (text.charAt(i)===" " || text.charAt(i)==="." ||text.charAt(i)===","){
-      text_array[i]=text.charAt(i);
-    
+    // se estiver fora do alfabeto
+    if (text.charCodeAt(i)<65 || text.charCodeAt(i)>90){
+    text_array[i]=text.charAt(i)    
     } else {
       //tranformar de letra para numero e somar o deslocamento
-      num_array[i]=(text.charCodeAt(i)-65 + offset)
-
-      //se o resultado da soma for maior que 25(z), começa de 0(a)
-      if (num_array[i]>25){
-        num_array[i]=num_array[i]-26
-      }
-
-      // se estiver fora do alfabeto (0 a 25)
-      if (num_array[i]>25 || num_array[i]<0){
-        text_array[i]=text.charAt(i)
-      } else {
-        //tranformar de numero para letra
-        text_array.push(String.fromCharCode(num_array[i]+65))
-      }
+      num_array[i]=(text.charCodeAt(i)-65 + offset)%26 +65
+      //tranformar de numero para letra
+      text_array.push(String.fromCharCode(num_array[i]))
     }
   }
 
@@ -50,9 +33,6 @@ function encode(text,offset){
 }
 
 
-
-
-
 function decode(text,offset){
   text = text.toUpperCase();
 
@@ -60,24 +40,15 @@ function decode(text,offset){
   let text_array = new Array;
   
 
-  for (i in text) {
-    
-    if (text.charAt(i)===" " || text.charAt(i)==="." ||text.charAt(i)===","){
-      text_array[i]=text.charAt(i);
-    
+  for (let i in text) {
+    // se estiver fora do alfabeto
+    if (text.charCodeAt(i)<65 || text.charCodeAt(i)>90){
+    text_array[i]=text.charAt(i)    
     } else {
-      num_array[i]=(text.charCodeAt(i)-65 - offset)
-
-      if (num_array[i]<0){
-        num_array[i]=num_array[i]+26
-      }
-
-      if (num_array[i]>25 || num_array[i]<0){
-        text_array[i]=text.charAt(i)
-      } else {
-        text_array.push(String.fromCharCode(num_array[i]+65))
-      }
-  
+      //tranformar de letra para numero e subtrair o deslocamento
+      num_array[i]=(text.charCodeAt(i)-65 - offset) % 26 + 65
+      //tranformar de numero para letra
+      text_array.push(String.fromCharCode(num_array[i]))
     }
   }
 

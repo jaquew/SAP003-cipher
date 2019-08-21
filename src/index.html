@@ -9,10 +9,10 @@
     <div id="root">
       <h1>Conexão Segura</h1>
       Digite o número de casas de deslocamento: 
-      <input type="number" id="offset">
+      <input type="number" id="offset" value="1" maxlength="2" size="7">
       <div id="container">
         <div>
-          <textarea rows="8" cols="50" id="decoded" placeholder="Texto a ser codificado"></textarea>
+          <textarea rows="8" cols="50" id="decoded" placeholder="Texto decifrado"></textarea>
         </div>
         <div id="buttons">
           <input type="submit" onclick="acao1()" value="Cifrar">
@@ -25,7 +25,7 @@
         </div>
         <div>
           <!-- <p>Texto a ser decifrado:</p> -->
-          <textarea rows="8" cols="50" type="text" id="encoded" placeholder="Texto a ser decifrado"></textarea>
+          <textarea rows="8" cols="50" type="text" id="encoded" placeholder="Texto codificado"></textarea>
         </div>
       </div>
     </div>
