@@ -1,42 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Amaranth|Press+Start+2P&display=swap');
+
 body{
     text-align: center;
     color: #fff;
     background-color: rgb(22, 22, 22);
     margin: 50px auto;
     padding: 20px;
-    font-size: 18px; 
+    font-size: 20px; 
+    font-family: Amaranth;
 }
+header h1{
+    font-family: 'Press Start 2P';
+    font-size: 1.6em;
+}
+
 #container{
     display: flex;
     justify-content: space-around;
+    height: 80%;
 }
 
 #buttons {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    
 }
 .cxtxt{
     width: 35%;
 
 }
 
-input, label {
+label {
     display:block;
 }
 input[type=submit]{
     background:    #51961d; 
     background:    linear-gradient(#62b529, #51961d 50%, #62b529);
     border-radius: 12px;
-    padding:       12px 15px;
+    padding:       8px 12px;
     color:         #ffffff;
     display:       inline-block;
-    font:          normal normal 22px/1 "Calibri", sans-serif;
+    font:          normal normal 20px "Calibri", sans-serif;
     text-align:    center;
     text-shadow:   1px 1px #666666;
+    font-family: 'Press Start 2P';
+    font-size: 0.7em;
+    margin: 5px;
 }
 input[type=number]{
-    display: block;
+    /* display: block; */
     margin: auto;
     width: 50px;
     font-size: 16px;
@@ -52,7 +65,32 @@ textarea{
     background-color: rgb(177, 177, 177);
     font-size: 16px;
     width: 100%;
-    height: 200px;
+    height: 100%;
 
 }
 
+@media only screen and (max-width: 700px){
+  body{
+    margin: 5px;
+  }
+  #container{
+      flex-direction: column;
+      align-items: center;
+      height: 300px;;
+  }
+
+  .cxtxt{
+    width: 90%;
+    height: 35%;
+    margin: 20px 0;
+  }
+
+  label{
+    text-align: left
+  }
+
+  #buttons{
+    flex-direction: row; 
+  }
+
+}
