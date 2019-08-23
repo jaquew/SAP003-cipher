@@ -8,13 +8,16 @@
   <body>
     <div id="root">
       <header>
-      <h1>Sistema Anti-vigilância Governamental</h1>
+      <h1>Encode Yourself</h1>
+      <p>Sistema de anti-monitoramento governamental</p>
       </header>
+
       <div id="titulo">
       Digite o número de casas de deslocamento:
       <input type="number" id="offset" value="1" required>
-      <br>
       </div>
+      <br>
+
       <div id="container">
         <div class="cxtxt">
           <label for="decoded">Texto Decodificado</label>
@@ -22,11 +25,12 @@
         </div>
 
         <div id="buttons">
-          <input type="submit" onclick="encodetxt()" value="Cifrar &#8594">
           <br>
-          <input type="submit" onclick="decodetxt()" value="&#8592 Decifrar">
-          <br>
-          <input type="reset" onclick="cleartxt()" value="Limpar">
+          <input type="submit" id="cifrar" value="Cifrar">
+
+          <input type="submit" id="decifrar" value="Decifrar">
+
+          <input type="reset" id="clear" value="Limpar">
         
         </div>
         <div class="cxtxt">
