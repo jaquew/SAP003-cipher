@@ -1,4 +1,6 @@
 document.getElementById("cifrar").addEventListener("click", encodetxt);
+document.getElementById("decifrar").addEventListener("click", decodetxt);
+document.getElementById("clear").addEventListener("click", cleartxt);
 
 function encodetxt() {
   let text = document.getElementById("decoded").value;
@@ -11,8 +13,6 @@ function encodetxt() {
   }
 }
 
-document.getElementById("decifrar").addEventListener("click", decodetxt);
-
 function decodetxt() {
   let text = document.getElementById("encoded").value;
   let offset = Number(document.getElementById("offset").value);
@@ -23,8 +23,6 @@ function decodetxt() {
     document.getElementById("decoded").value=window.cipher.decode(offset, text);
   }
 }
-
-document.getElementById("clear").addEventListener("click", cleartxt);
 
 function cleartxt() {
   document.getElementById("encoded").value="";

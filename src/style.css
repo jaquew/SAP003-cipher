@@ -49,7 +49,6 @@ input[type=submit]{
     margin: 5px;
 }
 input[type=number]{
-    /* display: block; */
     margin: auto;
     width: 50px;
     font-size: 16px;
