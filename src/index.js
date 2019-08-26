@@ -1,4 +1,6 @@
-document.getElementById("cifrar").addEventListener("click", function encodetxt() {
+document.getElementById("cifrar").addEventListener("click", encodetxt);
+
+function encodetxt() {
   let text = document.getElementById("decoded").value;
   let offset = Number(document.getElementById("offset").value);
 
@@ -7,10 +9,11 @@ document.getElementById("cifrar").addEventListener("click", function encodetxt()
   } else {
     document.getElementById("encoded").value=cipher.encode(offset, text);
   }
-}
-);
+};
 
-document.getElementById("decifrar").addEventListener("click", function decodetxt() {
+document.getElementById("decifrar").addEventListener("click", decodetxt);
+
+function decodetxt() {
   let text = document.getElementById("encoded").value;
   let offset = Number(document.getElementById("offset").value);
 
@@ -19,8 +22,7 @@ document.getElementById("decifrar").addEventListener("click", function decodetxt
   } else {
     document.getElementById("decoded").value=window.cipher.decode(offset, text);
   }
-}
-);
+};
 
 document.getElementById("clear").addEventListener("click", function cleartxt() {
   document.getElementById("encoded").value="";

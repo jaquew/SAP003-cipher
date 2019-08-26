@@ -12,12 +12,12 @@ function encode(offset, text) {
 
     if (97<=text.charCodeAt(i) && text.charCodeAt(i)<=122) {//se for minuscula
       //tranformar de letra para numero e somar o deslocamento
-      numArray[i]=(text.charCodeAt(i)+33 + offset)%26 +97;
+      numArray[i]=(text.charCodeAt(i)-97 + offset)%26 +97;
       //tranformar de numero para letra
       textArray[i]=(String.fromCharCode(numArray[i]));
         
     } else if (65<=text.charCodeAt(i) && text.charCodeAt(i)<=90) {//se for maiuscula
-      numArray[i]=(text.charCodeAt(i)+39 + offset)%26 +65;
+      numArray[i]=(text.charCodeAt(i)-65 + offset)%26 +65;
       textArray[i]=(String.fromCharCode(numArray[i]));
 
     } else {
@@ -36,11 +36,11 @@ function decode(offset, text) {
   
   for (let i in text) { 
     if (97<=text.charCodeAt(i) && text.charCodeAt(i)<=122) {
-      numArray[i]=(text.charCodeAt(i)+33 - offset)%26 +97;
+      numArray[i]=(text.charCodeAt(i)+97 - offset)%26 +97;
       textArray[i]=(String.fromCharCode(numArray[i]));
         
     } else if (65<=text.charCodeAt(i) && text.charCodeAt(i)<=90) {
-      numArray[i]=(text.charCodeAt(i)+39 - offset)%26 +65;
+      numArray[i]=(text.charCodeAt(i)+65 - offset)%26 +65;
       textArray[i]=(String.fromCharCode(numArray[i]));
 
     } else {
