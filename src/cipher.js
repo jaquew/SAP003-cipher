@@ -31,16 +31,18 @@ function encode(offset, text) {
 }
 
 function decode(offset, text) {
+
   let numArray = new Array;
   let textArray = new Array;
   
   for (let i in text) { 
+    // colocar o valores ascii ao contrário (de Z a A)
     if (97<=text.charCodeAt(i) && text.charCodeAt(i)<=122) {
-      numArray[i]=(text.charCodeAt(i)+97 - offset)%26 +97;
+      numArray[i]=(text.charCodeAt(i)-122 - offset)%26 +122;
       textArray[i]=(String.fromCharCode(numArray[i]));
         
     } else if (65<=text.charCodeAt(i) && text.charCodeAt(i)<=90) {
-      numArray[i]=(text.charCodeAt(i)+65 - offset)%26 +65;
+      numArray[i]=(text.charCodeAt(i)-90 - offset)%26 +90;
       textArray[i]=(String.fromCharCode(numArray[i]));
 
     } else {

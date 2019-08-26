@@ -9,7 +9,7 @@ function encodetxt() {
   } else {
     document.getElementById("encoded").value=cipher.encode(offset, text);
   }
-};
+}
 
 document.getElementById("decifrar").addEventListener("click", decodetxt);
 
@@ -22,11 +22,12 @@ function decodetxt() {
   } else {
     document.getElementById("decoded").value=window.cipher.decode(offset, text);
   }
-};
+}
 
-document.getElementById("clear").addEventListener("click", function cleartxt() {
+document.getElementById("clear").addEventListener("click", cleartxt);
+
+function cleartxt() {
   document.getElementById("encoded").value="";
   document.getElementById("decoded").value="";
   document.getElementById("offset").value="1";
 }
-);
