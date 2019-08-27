@@ -5,11 +5,13 @@ document.getElementById("clear").addEventListener("click", cleartxt);
 function encodetxt() {
   let text = document.getElementById("decoded").value;
   let offset = Number(document.getElementById("offset").value);
-
+  
   if (text==="") {
     alert("Por favor, digite uma mensagem.");
+  } else if (offset >=0) {
+    document.getElementById("encoded").value=window.cipher.encode(offset, text);
   } else {
-    document.getElementById("encoded").value=cipher.encode(offset, text);
+    document.getElementById("encoded").value=window.cipher.decode(-offset, text);
   }
 }
 
@@ -19,8 +21,10 @@ function decodetxt() {
 
   if (text==="") {
     alert("Por favor, digite uma mensagem.");
-  } else {
+  } else if (offset >=0) {
     document.getElementById("decoded").value=window.cipher.decode(offset, text);
+  } else {
+    document.getElementById("decoded").value=window.cipher.encode(-offset, text);
   }
 }
 

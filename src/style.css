@@ -1,23 +1,28 @@
 @import url('https://fonts.googleapis.com/css?family=Amaranth|Press+Start+2P&display=swap');
-
+html{
+    height: 100%;
+}
 body{
     text-align: center;
     color: #fff;
     background-color: rgb(22, 22, 22);
-    margin: 50px auto;
+    /* height: 100%; */
     padding: 20px;
-    font-size: 20px; 
+    font-size: 24px; 
     font-family: Amaranth;
+    background: url(images/cyber.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
 }
-header h1{
+h1{
     font-family: 'Press Start 2P';
     font-size: 1.6em;
+    color: #89f144;
 }
 
 #container{
     display: flex;
     justify-content: space-around;
-    height: 80%;
 }
 
 #buttons {
@@ -28,7 +33,6 @@ header h1{
 }
 .cxtxt{
     width: 35%;
-
 }
 
 label {
@@ -41,11 +45,10 @@ input[type=submit]{
     padding:       8px 12px;
     color:         #ffffff;
     display:       inline-block;
-    font:          normal normal 20px "Calibri", sans-serif;
+    font:          normal normal 20px "Press Start 2P", sans-serif;
     text-align:    center;
     text-shadow:   1px 1px #666666;
-    font-family: 'Press Start 2P';
-    font-size: 0.7em;
+    font-size: 0.6em;
     margin: 5px;
 }
 input[type=number]{
@@ -64,11 +67,12 @@ textarea{
     background-color: rgb(177, 177, 177);
     font-size: 16px;
     width: 100%;
-    height: 100%;
-
+    height: 200px;
+    border-radius: 12px;
 }
 
-@media only screen and (max-width: 700px){
+
+/* @media only screen and (max-width: 700px){
   body{
     margin: 5px;
   }
@@ -92,4 +96,4 @@ textarea{
     flex-direction: row; 
   }
 
-}
+} */
