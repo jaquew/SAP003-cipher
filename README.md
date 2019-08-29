@@ -1,4 +1,4 @@
-# Cifra de César
+# Encode Yourself
 
 ## Índice
 
@@ -39,5 +39,11 @@ Há dois campos para inserção do texto, um à esquerda para cifrar e outro à 
 Há ainda um botão de <strong>Limpar</strong> que apaga as mensagens dos campos e retorna o deslocamento para o padrão.
 
 ## 4. Considerações finais
+
+Projeto apresentado como requisito do curso de programação da Laboratória.
+
+Projeto 1: Cifra de César.
+
+De 19/08/2019 a 30/09/2019
 
 
