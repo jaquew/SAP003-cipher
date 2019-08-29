@@ -10,9 +10,13 @@ function encodetxt() {
     alert("Por favor, digite uma mensagem.");
   } else if (offset >=0) {
     document.getElementById("encoded").value=window.cipher.encode(offset, text);
+    
+
   } else {
     document.getElementById("encoded").value=window.cipher.decode(-offset, text);
   }
+  document.getElementById("decoded").value="";
+  document.getElementById("decoded").focus();
 }
 
 function decodetxt() {
@@ -26,6 +30,8 @@ function decodetxt() {
   } else {
     document.getElementById("decoded").value=window.cipher.encode(-offset, text);
   }
+  document.getElementById("encoded").value="";
+  document.getElementById("encoded").focus();
 }
 
 function cleartxt() {
