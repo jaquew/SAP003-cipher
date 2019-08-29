@@ -12,7 +12,7 @@
 ## 1. Prefácio
 A segurança na internet é um dos assuntos mais discutos da atualidade. Depois que notícias de monitoramento de e-mails e mensagem pelo governo, surge uma necessidade de uma aplicação por onde seja possível enviar e receber mensagens de forma segura. 
 
-![Espionagem de Emails](https://github.com/jaquew/SAP003-cipher/emails.png "Espionagem de Emails")
+![Espionagem de Emails](https://raw.githubusercontent.com/jaquew/SAP003-cipher/master/emails.png "Espionagem de Emails")
 
 
 ## 2. Projeto "Encode Yourself"
