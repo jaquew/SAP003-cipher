@@ -6,11 +6,12 @@ body{
     text-align: center;
     color: #fff;
     background-color: rgb(22, 22, 22);
-    padding: 20px;
+    padding: 20px 5;
     font-size: 24px; 
     font-family: Amaranth;
     background: url(images/cyber.jpg) no-repeat;
     background-size: cover;
+    background-position: center;
 }
 h1{
     font-family: 'Press Start 2P';
@@ -21,16 +22,20 @@ h1{
 #container{
     display: flex;
     justify-content: space-around;
+    width: 100%;
+    padding-top: 10px;
+
 }
 
 #buttons {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    max-width: 20%;
     
 }
 .cxtxt{
-    width: 35%;
+    min-width: 35%;
 }
 
 label {
@@ -40,14 +45,15 @@ input[type=submit]{
     background:    #51961d; 
     background:    linear-gradient(#62b529, #51961d 50%, #62b529);
     border-radius: 12px;
-    padding:       8px 12px;
+    padding:       6px 8px;
     color:         #ffffff;
     display:       inline-block;
-    font:          normal normal 20px "Press Start 2P", sans-serif;
+    font:          20px "Press Start 2P", sans-serif;
     text-align:    center;
     text-shadow:   1px 1px #666666;
-    font-size: 0.6em;
-    margin: 5px;
+    font-size:     0.5em;
+    margin:        5px;
+   
 }
 input[type=number]{
     margin: auto;
@@ -58,27 +64,34 @@ input[type=reset]{
     color: #fff;
     background:    linear-gradient(#b52929, #961d1d 50%, #b52929);
     border-radius: 12px;
-    padding:       6px 8px;
+    padding: 0px 8px;
 }
 
 textarea{
     background-color: rgb(177, 177, 177);
     font-size: 16px;
-    width: 100%;
     height: 200px;
     border-radius: 12px;
     padding: 15px;
+    width: 90%;
 }
 
 
-/* @media only screen and (max-width: 700px){
+
+@media only screen and (max-width: 700px){
   body{
     margin: 5px;
+    font-size: 20px;
+    background-size: cover;
+  }
+  h1{
+    font-size: 1.2em;
   }
   #container{
       flex-direction: column;
       align-items: center;
-      height: 300px;;
+      width: 100%;
+      padding: 0;
   }
 
   .cxtxt{
@@ -88,11 +101,30 @@ textarea{
   }
 
   label{
-    text-align: left
+    text-align: left;
+    margin-left: 15px;
   }
 
   #buttons{
     flex-direction: row; 
-  }
+    justify-content: space-evenly;
+    max-width: 100%;
+    width: 80%;
 
-} */
+  }
+  textarea{
+    height: 100px;
+}
+input[type=reset]{
+    order:2;
+    font-size: 0.6em;
+    padding: 3px 5px;
+}
+#cifrar{
+    order: 1;
+}
+
+#decifrar{
+    order: 3;
+}
+}

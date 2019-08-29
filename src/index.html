@@ -7,37 +7,33 @@
     <link rel="icon" href="images/icon.png" type="image/x-icon">
   </head>
   <body>
-    <div id="root">
-      <header>
-      <h1>Encode Yourself</h1>
-      <p>Sistema de anti-monitoramento governamental</p>
-      </header>
+    <header>
+    <h1>Encode Yourself</h1>
+    <p>Sistema de anti-monitoramento governamental</p>
+    </header>
 
-      <div id="titulo">
-      Digite o número de casas de deslocamento:
-      <input type="number" id="offset" value="1" required>
+    <div id="titulo">
+    Digite o número de casas de deslocamento:
+    <input type="number" id="offset" value="1" required>
+    </div>
+
+    <div id="container">
+      <div class="cxtxt">
+        <label for="decoded">Texto a ser Cifrado</label>
+          <textarea id="decoded" placeholder="Digite o texto aqui"></textarea>
       </div>
-      <br>
 
-      <div id="container">
-        <div class="cxtxt">
-          <label for="decoded">Texto a ser Cifrado</label>
-            <textarea id="decoded" placeholder="Digite o texto aqui"></textarea>
-        </div>
+      <div id="buttons">
+        <input type="submit" id="cifrar" value="Cifrar">
 
-        <div id="buttons">
-          <br>
-          <input type="submit" id="cifrar" value="Cifrar >>>">
+        <input type="submit" id="decifrar" value="Decifrar">
 
-          <input type="submit" id="decifrar" value="<<< Decifrar">
-
-          <input type="reset" id="clear" value="Limpar">
-        
-        </div>
-        <div class="cxtxt">
-          <label for="encoded">Texto a ser Decifrado</label>
-          <textarea id="encoded" placeholder="Digite o texto aqui"></textarea>
-        </div>
+        <input type="reset" id="clear" value="Limpar">
+      
+      </div>
+      <div class="cxtxt">
+        <label for="encoded">Texto a ser Decifrado</label>
+        <textarea id="encoded" placeholder="Digite o texto aqui"></textarea>
       </div>
     </div>
     <footer>
