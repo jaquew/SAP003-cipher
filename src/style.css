@@ -18,6 +18,10 @@ h1{
     font-size: 1.6em;
     color: #89f144;
 }
+header{
+    padding-top: 15px;
+    line-height: 70%;
+}
 
 #container{
     display: flex;
@@ -78,7 +82,7 @@ textarea{
 
 
 
-@media only screen and (max-width: 700px){
+@media screen and (max-width: 760px) {
   body{
     margin: 5px;
     font-size: 20px;

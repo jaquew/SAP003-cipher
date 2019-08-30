@@ -10,8 +10,6 @@ function encodetxt() {
     alert("Por favor, digite uma mensagem.");
   } else if (offset >=0) {
     document.getElementById("encoded").value=window.cipher.encode(offset, text);
-    
-
   } else {
     document.getElementById("encoded").value=window.cipher.decode(-offset, text);
   }
