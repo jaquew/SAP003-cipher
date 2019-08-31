@@ -91,6 +91,9 @@ textarea{
   h1{
     font-size: 1.2em;
   }
+  header{
+    line-height: 110%;
+  }
   #container{
       flex-direction: column;
       align-items: center;
