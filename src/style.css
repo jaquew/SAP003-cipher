@@ -1,7 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Amaranth|Press+Start+2P&display=swap');
-html{
-    height: 100%;
-}
 body{
     text-align: center;
     color: #fff;
@@ -10,8 +7,8 @@ body{
     font-size: 24px; 
     font-family: Amaranth;
     background: url(images/cyber.jpg) no-repeat;
-    background-size: cover;
     background-position: center;
+    background-attachmente: fixed;
 }
 h1{
     font-family: 'Press Start 2P';
