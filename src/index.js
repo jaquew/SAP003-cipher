@@ -14,7 +14,7 @@ function encodetxt() {
     document.getElementById("encoded").value=window.cipher.decode(-offset, text);
   }
   document.getElementById("decoded").value="";
-  document.getElementById("decoded").focus();
+  document.getElementById("encoded").focus();
 }
 
 function decodetxt() {
@@ -29,7 +29,7 @@ function decodetxt() {
     document.getElementById("decoded").value=window.cipher.encode(-offset, text);
   }
   document.getElementById("encoded").value="";
-  document.getElementById("encoded").focus();
+  document.getElementById("decoded").focus();
 }
 
 function cleartxt() {
